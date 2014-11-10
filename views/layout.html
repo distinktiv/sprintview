@@ -36,7 +36,8 @@
 <div class="jumbotron">
 <div class="container">
     <div class="starter-template">
-        <h1>Release Manager / Project Manager of the current week</h1>
+        <img src="../img/alicia.jpeg" height="140px" width="140" class="img-circle" alt="...">
+        <h1>RM->LT / PM-> Joel</h1>
     </div>
     {% block content %}{% endblock %}
 </div><!-- /.container -->
@@ -44,7 +45,22 @@
 
 
 <div class="container">
-<p>TIMELINE</p>
+    <div id="timeline-embed"></div>
+    <script type="text/javascript">
+        var timeline_config = {
+            width:              '100%',
+            height:             '400',
+            source:             'js/timeline.json',
+            start_at_slide:     '1'
+        }
+
+        $(document).ready(function() {
+            createStoryJS({
+                type:       'timeline',
+                source:     timeline_config
+            });
+        });
+    </script>
 </div><!-- /.container -->
 
 
@@ -53,5 +69,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+
 </body>
 </html>
