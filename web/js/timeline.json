@@ -1,37 +1,73 @@
 {
     "timeline":
     {
-        "headline":"The Main Timeline Headline Goes here",
+        "headline":"Sprint START",
         "type":"default",
-        "text":"<p>Intro body text goes here, some HTML is ok</p>",
+        "text":"<p>From November 3thrd to 18th</p>",
         "asset": {
-        "media":"http://yourdomain_or_socialmedialink_goes_here.jpg",
-            "credit":"Credit Name Goes Here",
-            "caption":"Caption text goes here"
+        "media":"",
+            "credit":"",
+            "caption":""
     },
-        "date": [
+    "date": [
         {
-            "startDate":"2011,12,10",
-            "endDate":"2011,12,11",
-            "headline":"Headline Goes Here",
-            "text":"<p>Body text goes here, some HTML is OK</p>",
-            "tag":"This is Optional",
+            "startDate":"2014,11,03",
+            "endDate":"2014,11,05",
+            "headline":"Rm nasty duty",
+            "text":"<p></p>",
             "classname":"optionaluniqueclassnamecanbeaddedhere",
             "asset": {
-                "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                "media":"",
+                "thumbnail":"optional-32x32px.jpg",
+                "credit":"Credit Name Goes Here",
+                "caption":"Caption text goes here"
+            }
+        },
+
+        {
+            "startDate":"2014,11,07",
+            "endDate":"2014,11,10",
+            "headline":"week2",
+            "text":"<p></p>",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"",
+                "thumbnail":"optional-32x32px.jpg",
+                "credit":"Credit Name Goes Here",
+                "caption":"Caption text goes here"
+            }
+        },
+
+        {
+            "startDate":"2014,11,18",
+            "endDate":"2014,11,18",
+            "headline":"The END",
+            "text":"<p></p>",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"",
                 "thumbnail":"optional-32x32px.jpg",
                 "credit":"Credit Name Goes Here",
                 "caption":"Caption text goes here"
             }
         }
+
     ],
         "era": [
         {
-            "startDate":"2011,12,10",
-            "endDate":"2011,12,11",
-            "headline":"Headline Goes Here",
+            "startDate":"2014,11,03",
+            "endDate":"2014,11,05",
+            "headline":"ttototo",
             "text":"<p>Body text goes here, some HTML is OK</p>",
-            "tag":"This is Optional"
+            "tag":""
+        },
+
+        {
+            "startDate":"2014,11,08",
+            "endDate":"2014,11,15",
+            "headline":"keep it green",
+            "text":"<p>Body text goes here, some HTML is OK</p>",
+            "tag":""
         }
 
     ]
