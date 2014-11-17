@@ -19,6 +19,8 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 //Routing
 /***********************/
 $app->get('/', function() use($app) {
+    $rmFiles = $app['sprintview.getRmFile'];
+    $rmFiles("../web/js/rm.json");
     return $app['twig']->render('layout.html',['name' => 'toto']);
 });
 
@@ -31,8 +33,7 @@ $app['sprintview.getRmFile'] = $app->protect(function($file_path){
     $json_data = json_decode($file_data, true);
     if (is_array($json_data)) {
         foreach ($json_data as $data) {
-            $entity = new $class_name($data);
-            $entities[] = $entity;
+                //echo $data;
         }
     }
 });
