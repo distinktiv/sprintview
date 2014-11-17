@@ -27,6 +27,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Release Manager</a></li>
+                <li ><span class="glyphicon glyphicon-cog" aria-hidden="true">::before</span></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -34,13 +35,30 @@
 
 
 <div class="jumbotron">
+    <div class="container">
+        <div class="starter-template row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4"><img src="../img/david.jpg" height="140px" width="140" class="img-circle" alt="..."></div>
+                    <div class="col-md-4"><img src="../img/pascale.jpg" height="140px" width="140" class="img-circle" alt="..."></div>
+                </div>
+                <div class="row">22 Nov - 30 Nov</div>
+            </div>
+            <div class="col-md-4"><h3>SH</h3></div>
+            <!--img src="../img/pascale.jpg" height="140px" width="140" class="img-circle" alt="..."-->
+        </div>
+
+        {% block content %}{% endblock %}
+    </div><!-- /.container -->
+</div>
+
 <div class="container">
-    <div class="starter-template">
-        <!--img src="../img/pascale.jpg" height="140px" width="140" class="img-circle" alt="..."-->
-        <h3>RM/PM</h3   >
+    <div class="row starter-template">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
     </div>
-    {% block content %}{% endblock %}
-</div><!-- /.container -->
 </div>
 
 
@@ -52,7 +70,7 @@
             height:             '400',
             source:             'js/timeline.json',
             start_at_slide:     '1'
-        }
+        };
 
         $(document).ready(function() {
             createStoryJS({
@@ -64,7 +82,8 @@
 </div><!-- /.container -->
 
 <div class="container">
-    Berroclobl
+    <div class="col-md-4"><img src="../img/pascale.jpg" height="140px" width="140" class="img-circle" alt="..."></div>
+    <div class="col-md-8">Beer O'clock</div>
 </div>
 
 

@@ -21,6 +21,22 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->get('/', function() use($app) {
     return $app['twig']->render('layout.html',['name' => 'toto']);
 });
+
+
+/***********************/
+//Helpers
+/***********************/
+$app['sprintview.getRmFile'] = $app->protect(function($file_path){
+    $file_data = file_get_contents($file_path);
+    $json_data = json_decode($file_data, true);
+    if (is_array($json_data)) {
+        foreach ($json_data as $data) {
+            $entity = new $class_name($data);
+            $entities[] = $entity;
+        }
+    }
+});
+
 $app->run();
 ?>
 
