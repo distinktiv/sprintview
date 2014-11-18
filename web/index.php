@@ -19,9 +19,10 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 //Routing
 /***********************/
 $app->get('/', function() use($app) {
-    $rmFiles = $app['sprintview.getManager'];
-    $rm = $rmFiles("../web/js/rm.json");
-    $pm = $rmFiles("../web/js/pm.json");
+    $manager = $app['sprintview.getManager'];
+    $rm = $manager("../web/js/rm.json");
+    $pm = $manager("../web/js/pm.json");
+    $sh = $manager("../web/js/pm.json");
     return $app['twig']->render('layout.html',['rm' => $rm, 'pm'=>$pm]);
 });
 
