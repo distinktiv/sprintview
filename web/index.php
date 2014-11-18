@@ -19,24 +19,24 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 //Routing
 /***********************/
 $app->get('/', function() use($app) {
-    $rmFiles = $app['sprintview.getRmFile'];
-    $rmFiles("../web/js/rm.json");
-    return $app['twig']->render('layout.html',['name' => 'toto']);
+    $rmFiles = $app['sprintview.getManager'];
+    $rm = $rmFiles("../web/js/rm.json");
+    $pm = $rmFiles("../web/js/pm.json");
+    return $app['twig']->render('layout.html',['rm' => $rm, 'pm'=>$pm]);
 });
 
 
 /***********************/
 //Helpers
 /***********************/
-$app['sprintview.getRmFile'] = $app->protect(function($file_path){
+$app['sprintview.getManager'] = $app->protect(function($file_path){
     $file_data = file_get_contents($file_path);
     $json_data = json_decode($file_data, true);
     if (is_array($json_data)) {
-        foreach ($json_data as $data) {
-                //echo $data;
-        }
+        return $json_data[0];
     }
 });
+
 
 $app->run();
 ?>
